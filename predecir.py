@@ -2,14 +2,19 @@ import numpy as np
 from keras.preprocessing.image import load_img, img_to_array
 from keras.models import load_model
 import os
+import index
 import sys
+from flask import Flask, render_template, request, redirect, url_for
+from PIL import Image
 longitud, altura = 100, 100
 modelo = 'C:/Users/usuario/anaconda3/redneuro/templates/image/modelo/modelo.h5'
 pesos_modelo = 'C:/Users/usuario/anaconda3/redneuro/templates/image/modelo/pesos.h5'
-cnn = load_model(modelo)
-cnn.load_weights(pesos_modelo)
+image_path = "C:/Users/usuario/anaconda3/redneuro/"
+imgs = os.listdir(image_path)
+cnn = load_model(modelo)# cargar nurto modelo  creado 
+cnn.load_weights(pesos_modelo)# cargar los pesos de nuetro modelo 
 
-def clasificar(file):
+def predict(file):
     x = load_img(file, target_size=(longitud, altura))#carga la imagen 
     x = img_to_array(x)# en arreglo se covierte nustra imagen 
     x = np.expand_dims(x, axis=0)# poder procesar nuert dimencion sin problemas 
@@ -32,4 +37,3 @@ def clasificar(file):
 
 
     return answer
-
