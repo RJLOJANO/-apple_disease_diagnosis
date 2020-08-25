@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inteligencia Artificial </title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" > Detección de Enfermedades en Plantas</a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+      </nav>
+
+      <div class="container">
+        <div class="row">
+          <div class="col">
+      
+            <h1>Subir Imagen para entrenar Enfermedad Oxido-Manzana</h1>
+            <hr>
+      
+            <form action="/entrena/oxido" method="POST" enctype="multipart/form-data">
+      
+              <div class="form-group">
+                <h2>
+            
+                </h2>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" name="image" id="image">
+                  <label class="custom-file-label" for="image"> Seleccionar una Imagen ...</label>
+                </div>
+              </div>
+              <h2>
+      
+              </h2>
+              <button type="submit" class="btn btn-primary">Subir</button>
+      
+            </form>
+      
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="container">
+        <div class="row">
+          <div class="col">
+      
+            <h1>Subir Imagen para entrenar Enfermedad Podrir-Manzana</h1>
+            <hr>
+      
+            <form action="/entrena/podrir" method="POST" enctype="multipart/form-data">
+      
+              <div class="form-group">
+                <h2>
+            
+                </h2>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" name="image" id="image">
+                  <label class="custom-file-label" for="image"> Seleccionar una Imagen ...</label>
+                </div>
+              </div>
+              <h2>
+      
+              </h2>
+              <button type="submit" class="btn btn-primary">Subir</button>
+      
+            </form>
+      
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="container">
+        <div class="row">
+          <div class="col">
+      
+            <h1>Subir Imagen para entrenar Enfermedad Costra-Manzana</h1>
+            <hr>
+      
+            <form action="/entrena/costra" method="POST" enctype="multipart/form-data">
+      
+              <div class="form-group">
+                <h2>
+            
+                </h2>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" name="image" id="image">
+                  <label class="custom-file-label" for="image"> Seleccionar una Imagen ...</label>
+                </div>
+              </div>
+              <h2>
+      
+              </h2>
+              <button type="submit" class="btn btn-primary">Subir</button>
+      
+            </form>
+      
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="container">
+        <div class="row">
+          <div class="col">
+      
+            <h1>Subir Imagen para entrenar Manzana-Saludable</h1>
+            <hr>
+      
+            <form action="/entrena/saludable" method="POST" enctype="multipart/form-data">
+      
+              <div class="form-group">
+                <h2>
+            
+                </h2>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" name="image" id="image">
+                  <label class="custom-file-label" for="image"> Seleccionar una Imagen ...</label>
+                </div>
+              </div>
+              <h2>
+      
+              </h2>
+              <button type="submit" class="btn btn-primary">Subir</button>
+
+           
+            </form>
+         
+          </div>
+        </div>
+      </div>
+    
+      <div class="container">
+        <form action="/entrena/upload" method="POST" enctype="multipart/form-data">
+        <h4>Entrenar {{Button_entr}}</h4>
+        <form method="POST">
+        <input type="submit" value="Entrenar" >
+        </form>
+        </div>
+
+</body>
+</html>
