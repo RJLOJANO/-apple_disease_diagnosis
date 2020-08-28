@@ -22,18 +22,18 @@ def predict(file):
     result = array[0]# nos trae la 1 demencion 
     answer = np.argmax(result)# trae el indice del valor msas alto
     if answer == 0:
-        print("pred: unaen")
+        print("pred: costra")
         
     elif answer == 1:
-        print("pred: dosen")
+        print("pred: oxido")
 
     elif answer == 2:
       
-        print("pred: tresen")
+        print("pred: saludable")
         
     elif answer == 3:
 
-        print("pred: buena")
+        print("pred: podrir")
 
 
     return answer
