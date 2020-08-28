@@ -1,9 +1,10 @@
 import numpy as np
 from keras.preprocessing.image import load_img, img_to_array
 from keras.models import load_model
+from setuptools import setup, Extension, Feature
+import name 'Feature'
 import os
 import index
-import sys
 from flask import Flask, render_template, request, redirect, url_for
 from PIL import Image
 longitud, altura = 100, 100
